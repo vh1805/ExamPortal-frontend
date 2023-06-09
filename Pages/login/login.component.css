@@ -1,0 +1,14 @@
+.text-center{
+    width:100%;
+}
+
+.btn{
+    text-align: center;
+}
+.clr
+{
+    background-color: blanchedalmond;
+    margin-top:10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
