@@ -1,7 +1,44 @@
-<nav>
-    <ul>
-        <li>Exam Portal</li>
-        <li class="btn"> <button mat-raised-button color="warn" routerLink="Login">Register</button></li>
-        <li class="btn"> <button mat-raised-button color="primary">Login</button></li>
-    </ul>
-</nav>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<header>
+  <div class="navbar">
+    <div class="nav-menu">
+      <div class="menu">
+        <i class="fa-solid fa-bars"></i>
+        All
+      </div>
+    </div>
+    <div class="nav-logo border1">
+      <h1>Exam Portal</h1>
+    </div>
+    <div class="nav-search border1">
+      <input type="search" placeholder="Enter Your Courses">
+      <div class="nav-icon">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+    </div>
+    <div *ngIf="!isLoggedIn" class="nav-login border1" routerLink="/login">
+      <div>
+        login
+      </div>
+    </div>
+    <div *ngIf="!isLoggedIn" class="nav-register border1" routerLink="/signup">
+      <div>
+        Register
+      </div>
+    </div>
+    <div (click)="logout()" *ngIf="isLoggedIn" class="nav-register border1">
+      <div>
+        Logout
+      </div>
+
+    </div>
+    <div *ngIf="isLoggedIn" (click)="navigate()" class="nav-register border1">
+      <div>
+        {{ login.getUser().username }}
+      </div>
+
+    </div>
+  </div>
+</header>
