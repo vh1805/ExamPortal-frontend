@@ -1,0 +1,26 @@
+<mat-card>
+    <h1 mat-subheader class="text-center mrt">Add New Category</h1>
+    <mat-card-content>
+        <form (ngSubmit)="formSubmit()">
+
+            <mat-form-field appearance="outline" class="full-width mrt">
+                <mat-label>Title</mat-label>
+                <input type="text" [(ngModel)]="category.title" name="title" matInput placeholder="Enter here">
+              </mat-form-field>
+              
+
+              <mat-form-field appearance="outline" class="full-width mrt">
+                <mat-label>Description</mat-label>
+                <input type="text" [(ngModel)]="category.description" name="description" matInput placeholder="Enter here">
+              </mat-form-field>
+
+              <div class="container text-center mrt">
+                <button mat-raised-button color="accent"> Add Category</button>
+              </div>
+              
+
+              
+
+        </form>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<mat-card *ngFor="let q of Quiz" class="mrt">
+    <mat-card-header>
+        <mat-card-title>
+            {{q.title}}
+        </mat-card-title>
+        <mat-card-subtitle>
+            {{q.category.title}}
+        </mat-card-subtitle>
+    </mat-card-header >
+    <mat-card-content class="mrt">
+        {{q.description}}
+    </mat-card-content>
+    <div class="mrt mrb mrl">
+        <button mat-raised-button color="primary" [routerLink]="'/admin/view-question/' + q.qid + '/' + q.title">Question</button>
+        <button mat-stroked-button color="primary" class="mrl">Max Marks {{q.maxMarks}}</button>
+        <button mat-stroked-button color="primary" class="mrl">Number Of Question {{q.numberOfQuestions}}</button>
+        <button mat-raised-button color="primary" class="mrl" [routerLink]="'/admin/update-quiz/' + q.qid">Update</button>
+        <button mat-raised-button color="primary" class="mrl">Quiz Attempt</button>
+        <button mat-raised-button color="warn" class="mrl" (click)="deleteQuiz(q.qid)">Delete</button>
+
+    </div>
+</mat-card>
+
+<div class="container text-center mrt mrb">
+    <button routerLink="/admin/add-quiz" mat-raised-button color="warn">Add New Quiz</button>
+</div>

@@ -1,0 +1,9 @@
+.icon{
+    display: flex;
+}
+mat-card{
+    background-color: rgb(247, 240, 241);
+    margin-top: 20px;
+    border: 2px solid rgb(248, 218, 223);
+    border-radius: 10px;
+}

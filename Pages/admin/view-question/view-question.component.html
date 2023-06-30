@@ -1,0 +1,56 @@
+<div class="btn">
+  <h1 class="mrt text-center">Question of {{qTitle}}</h1>
+</div>
+
+<div class="bootstrap-wrapper">
+  <div class="row">
+    <div class="col-md-12">
+
+      <div class="container text-center mrt">
+        <button mat-raised-button color="warn" [routerLink]="'/admin/add-ques/' + qId + '/' + qTitle">Add Question</button>
+      </div>
+
+      <mat-card *ngFor="let q of Question ; let i=index" class="mrt">
+        <mat-card-content>
+
+          <p>
+            <b>Q{{i+1}} </b><span>{{q.content}}</span>
+          </p>
+
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-6">
+                <p><b>1)</b> {{q.option1}}</p>
+              </div>
+              <div class="col-md-6">
+                <p><b>2</b> {{q.option2}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <p><b>3)</b> {{q.option3}}</p>
+              </div>
+              <div class="col-md-6">
+                <p><b>4)</b> {{q.option4}}</p>
+              </div>
+            </div>
+          </div>
+
+          <mat-divider>
+
+          </mat-divider>
+          <p class="mrt"><b>Correct Answer: </b>{{q.answer}}</p>
+
+        </mat-card-content>
+
+        
+          <div class="container mrt mrb" style="text-align: center;">
+            <button mat-raised-button color="accent" (click)='deleteQuestion(q.quesId)'> Delete Question</button>
+          </div>
+        
+
+      </mat-card>
+    </div>
+  </div>
+</div>
+

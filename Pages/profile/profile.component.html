@@ -1,0 +1,45 @@
+<mat-card>
+    <h1 class="text-center">Your Profile Details</h1>
+    <mat-card-content>
+        <div class="bootstrap-wrapper">
+            <div class="container">
+                <div class="container text-center">
+                    <img src="../../../assets/AlluArjun.jpg" alt="" class="profile-img-responsive">
+                    <h2 class="mrt">{{login.getUser().firstName}} {{login.getUser().lastName}}</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+
+                        <!-- table Details -->
+                        <table class="text-center">
+                            <tr>
+                                <td>Username</td>
+                                <td>{{login.getUser().username}}</td>
+                            </tr>
+                            <tr>
+                                <td>Id</td>
+                                <td>EXAM{{login.getUser().id}}</td>
+                            </tr>
+                            <tr *ngIf="login.getUser().phone">
+                                <td>Phone No</td>
+                                <td>{{login.getUser().phone}}</td>
+                            </tr>
+                            <tr>
+                                <td>Role</td>
+                                <td>{{login.getUserRole()}}</td>
+                            </tr>
+                            <tr>
+                                <td>Status</td>
+                                <td>{{login.getUser().enabled?"ACTIVE":"NOTACTIVE"}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+    <mat-card-actions class="btn">
+        <button mat-raised-button color="primary">Update</button>
+        <button mat-raised-button color="accent">Share</button>
+    </mat-card-actions>
+</mat-card>

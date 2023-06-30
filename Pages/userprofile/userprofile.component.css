@@ -1,0 +1,27 @@
+.profile-img-responsive{
+    max-width: 150px;
+    max-height: 150px;
+    border: 2px solid #ff4081;
+    border-radius: 50%;
+    background-size:cover ;
+}
+mat-card h1{
+    margin-top: 10px;
+    font-weight: bolder;
+}
+
+table{
+    width: 100%;
+    border: 0.5px solid #e2e2e2;
+    border-collapse: collapse;
+}
+table tr td{
+    padding: 20px 50px;
+    font-size: 20px;
+    border: 0.5px solid #e2e2e2;
+}
+.btn button{
+    margin-top: 20px;
+    margin-left: 300px;
+    margin-bottom: 20px;
+}
