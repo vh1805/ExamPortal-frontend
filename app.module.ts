@@ -16,6 +16,32 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import { HomeComponent } from './Components/home/home.component';
+import {AuthInterceptorsProviders } from './service/auth.interceptor';
+import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
+import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboard.component';
+import {MatListModule} from '@angular/material/list';
+import {MatCardModule} from '@angular/material/card';
+import { ProfileComponent } from './Pages/profile/profile.component';
+import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
+import { ViewCategoryComponent } from './Pages/admin/view-category/view-category.component';
+import { AddCategoryComponent } from './Pages/admin/add-category/add-category.component';
+import { SidebarComponent } from './Pages/admin/sidebar/sidebar.component';
+import {MatDividerModule} from '@angular/material/divider';
+import { AddQuizesComponent } from './Pages/admin/add-quizes/add-quizes.component';
+import { ViewQuizesComponent } from './Pages/admin/view-quizes/view-quizes.component';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatSelectModule} from '@angular/material/select';
+import { UpdateQuizComponent } from './Pages/admin/update-quiz/update-quiz.component';
+import { ViewQuestionComponent } from './Pages/admin/view-question/view-question.component';
+import { AddQuestionComponent } from './pages/admin/add-question/add-question.component';
+import { UserSidebarComponent } from './Pages/user/user-sidebar/user-sidebar.component';
+import { LoadQuizComponent } from './pages/user/load-quiz/load-quiz.component';
+import { UserprofileComponent } from './pages/userprofile/userprofile.component';
+import { InstructionsComponent } from './pages/user/instructions/instructions.component';
+import { StartComponent } from './pages/user/start/start.component';
+
+
 
 @NgModule({
   declarations: [
@@ -23,7 +49,25 @@ import {MatIconModule} from '@angular/material/icon';
     NavbarComponent,
     SignupComponent,
     LoginComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
+    DashboardComponent,
+    UserDashboardComponent,
+    ProfileComponent,
+    SidebarComponent,
+    WelcomeComponent,
+    ViewCategoryComponent,
+    AddCategoryComponent,
+    AddQuizesComponent,
+    ViewQuizesComponent,
+    UpdateQuizComponent,
+    ViewQuestionComponent,
+    AddQuestionComponent,
+    UserSidebarComponent,
+    LoadQuizComponent,
+    UserprofileComponent,
+    InstructionsComponent,
+    StartComponent
   ],
   imports: [
     BrowserModule,
@@ -36,9 +80,16 @@ import {MatIconModule} from '@angular/material/icon';
     HttpClientModule,
     MatSnackBarModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    // MatListModule,
+    // MatCardModule,
+    MatDividerModule,
+    MatSlideToggleModule,
+    MatSelectModule,
+    MatCardModule,
+    MatListModule
   ],
-  providers: [],
+  providers: [AuthInterceptorsProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
